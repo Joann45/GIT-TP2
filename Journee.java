@@ -20,6 +20,10 @@ public class Journee {
 
     }
 
+    public String afficheCit(String cit){
+        return this.listeAuteurs.get(0) + " : " + this.listeAuteurs.get(0).citationStyle(cit) + " VS " + this.listeAuteurs.get(1) + " : " + this.listeAuteurs.get(1).citationStyle(cit);
+    }
+
     public Map<String, Integer> getScoreMatin(){
         Map<String, Integer> scoreMatin = new HashMap<>();
         for (int i=0; i<2; i++) {
@@ -54,5 +58,17 @@ public class Journee {
             return "Le gagnant est " + this.listeAuteurs.get(1).getNom();
         }
         return "Egalité";
+    }
+
+    @Override
+
+    public String toString(){
+        return "MATIN :\n" + this.afficheCit("Tragédie") + "\n\n" +
+                this.getScoreMatin() + "\n\n" +
+                "APRES MIDI :\n" + this.afficheCit("Commédie") + "\n\n" +
+                this.getScoreApresMidi() + "\n\n" +
+                "SOIREE :\n" + this.afficheCit("Drame") + "\n\n" +  
+                this.getScoreSoiree() + "\n\n" +
+                this.victoire() + "\n";        
     }
 }

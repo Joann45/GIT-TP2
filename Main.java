@@ -86,12 +86,15 @@ class Main {
       assert  sophocle.getQualTragedie()*25 == duel1.getScoreMatin().get("Sophocle");
   
       assert euripide.getQualCom()*25 == duel1.getScoreApresMidi().get("Euripide");
-      assert  sophocle.getQualCom()*25 == duel1.getScoreApresMidi().get("Sophocle");
+      assert sophocle.getQualCom()*25 == duel1.getScoreApresMidi().get("Sophocle");
   
       System.out.println(duel1.victoire());
       assert "Le gagnant est Euripide".equals(duel1.victoire());
       Journee duel2 = new Journee(sophocle,sophocle,20);
       assert "Egalité".equals(duel2.victoire());
+
+      System.out.println(duel1.toString());
+      System.out.println(duel2.toString()); //* */
     }
   }
   
