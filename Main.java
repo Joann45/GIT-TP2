@@ -82,13 +82,13 @@ class Main {
 
     //TESTS POUR LA CLASSE JOURNEE/
     Journee duel1 = new Journee(sophocle,euripide,25);
-    assert sophocle.getQualTragedie()*duel1.getSpectateurs() == duel1.getScoreMatin("Sophocle");
-    assert euripide.getQualTragedie()*duel1.getSpectateurs() == duel1.getScoreMatin("Euripide");
-    assert null == duel1.getScoreMatin("Aristophane");
+    assert euripide.getQualTragedie()*25 == duel1.getScoreMatin().get("Euripide");
+    assert  sophocle.getQualTragedie()*25 == duel1.getScoreMatin().get("Sophocle");
+    assert null == duel1.getScoreMatin().get("Aristophane");
 
-    assert sophocle.getQualCom()*duel1.getSpectateurs() == duel1.getScoreApresMidi("Sophocle");
-    assert euripide.getQualCom()*duel1.getSpectateurs() == duel1.getScoreApresMidi("Euripide");
-    assert null == duel1.getScoreApresMidi("Aristophane");
+    assert euripide.getQualCom()*25 == duel1.getScoreApresMidi().get("Euripide");
+    assert  sophocle.getQualCom()*25 == duel1.getScoreApresMidi().get("Sophocle");
+    assert null == duel1.getScoreApresMidi().get("Aristophane");
 
     assert "Le gagnant est Euripide" == duel1.victoire();
     Journee duel2 = new Journee(sophocle,sophocle,20);

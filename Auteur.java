@@ -71,6 +71,11 @@ public class Auteur {
         return cat;
     }
 
+    public String getNom(){
+        return this.nom;
+    }
+
+
     @Override
 
     public String toString(){
