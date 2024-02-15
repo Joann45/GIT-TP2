@@ -3,9 +3,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
 public class Journee {
     private List<Auteur> listeAuteurs;
     private int spectateurs;
+
 
     public Journee(Auteur auteur1, Auteur auteur2, int spectateurs) {
         this.listeAuteurs = new ArrayList<>();

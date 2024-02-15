@@ -1,3 +1,5 @@
+import dionysies.Tournoi;
+
 class Main {
     public static void main(String[] args) {
       String citation_antigone =
@@ -95,6 +97,14 @@ class Main {
 
       System.out.println(duel1.toString());
       System.out.println(duel2.toString()); //* */
+      Tournoi<Auteur> nouveauTournois = new Tournoi<>("Un Tournoi");
+      nouveauTournois.inscrire(aristophane);
+      nouveauTournois.inscrire(sophocle);
+      nouveauTournois.inscrire(euripide);
+      nouveauTournois.débute();
+      nouveauTournois.estCommencé();
+      nouveauTournois.enregistreRésultatJournée(true);
+      nouveauTournois.vainqueur();
     }
   }
   
